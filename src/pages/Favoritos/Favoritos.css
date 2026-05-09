@@ -1,0 +1,103 @@
+.favoritos-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* ── Favorite subject card ─────────────────────────── */
+.fav-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 52px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fav-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fav-card__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--blue-primary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.fav-card__title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+.fav-card__desc {
+    font-size: 0.975rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    max-width: 760px;
+}
+
+/* ── Why I like it box ─────────────────────────────── */
+.fav-card__why {
+    background: var(--blue-light);
+    border-radius: var(--radius-sm);
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 860px;
+}
+
+.fav-card__why-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blue-primary);
+}
+
+.fav-card__why-text {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+/* ── Learning section ──────────────────────────────── */
+.fav-learn {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.fav-learn__title {
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    font-weight: 800;
+    color: var(--blue-primary);
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.fav-learn__cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 900px) {
+    .fav-card {
+        padding: 36px 28px;
+    }
+
+    .fav-learn__cards {
+        flex-direction: column;
+    }
+}

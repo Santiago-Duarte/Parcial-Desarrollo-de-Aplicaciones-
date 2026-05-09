@@ -1,0 +1,56 @@
+.learn-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    flex: 1 1 0;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        box-shadow 0.25s,
+        transform 0.25s;
+}
+
+.learn-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.learn-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--blue-light);
+}
+
+.learn-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.learn-card:hover .learn-card__img {
+    transform: scale(1.05);
+}
+
+.learn-card__body {
+    padding: 22px 22px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.learn-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--blue-primary);
+    line-height: 1.3;
+}
+
+.learn-card__desc {
+    font-size: 0.875rem;
+    color: var(--text-body);
+    line-height: 1.65;
+}

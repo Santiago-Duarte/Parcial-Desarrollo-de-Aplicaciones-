@@ -1,0 +1,33 @@
+.commit-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-card);
+    flex: 1 1 0;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition:
+        box-shadow 0.25s,
+        transform 0.25s;
+}
+
+.commit-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.commit-card__number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--blue-primary);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.commit-card__text {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.65;
+}

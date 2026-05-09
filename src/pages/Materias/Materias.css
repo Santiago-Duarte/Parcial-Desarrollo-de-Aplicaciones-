@@ -1,0 +1,117 @@
+.materias-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+}
+
+.materias__container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* ── Sidebar ──────────────────────────────────────── */
+.materias__sidebar {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 12px 0;
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.materias__item {
+    width: 100%;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-body);
+    background: none;
+    border: none;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition:
+        background 0.18s,
+        color 0.18s,
+        border-color 0.18s;
+    line-height: 1.4;
+}
+
+.materias__item:hover {
+    background: var(--blue-light);
+    color: var(--blue-primary);
+}
+
+.materias__item--active {
+    background: var(--blue-light);
+    color: var(--blue-primary);
+    font-weight: 700;
+    border-left-color: var(--blue-primary);
+}
+
+/* ── Content panel ─────────────────────────────────── */
+.materias__content {
+    flex: 1;
+}
+
+.materias__detail {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 44px 48px;
+    min-height: 380px;
+    animation: fadeIn 0.28s ease;
+}
+
+.materias__detail--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.materias__detail-title {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 800;
+    color: var(--blue-primary);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.materias__detail-desc {
+    font-size: 0.975rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    max-width: 680px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+    .materias__container {
+        flex-direction: column;
+    }
+
+    .materias__sidebar {
+        width: 100%;
+    }
+
+    .materias__detail {
+        padding: 28px 24px;
+    }
+}

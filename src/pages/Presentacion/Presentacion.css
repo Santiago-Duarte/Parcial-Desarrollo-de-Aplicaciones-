@@ -1,0 +1,100 @@
+.present-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.present-hero {
+    background: var(--bg-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 60px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 360px;
+}
+
+.present-hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 520px;
+}
+
+.present-hero__greeting {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blue-primary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.present-hero__name {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.present-hero__code {
+    color: var(--blue-primary);
+}
+
+.present-hero__role {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.present-hero__illustration {
+    flex-shrink: 0;
+    width: clamp(220px, 30vw, 300px);
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--blue-light);
+    box-shadow: 0 8px 32px rgba(21, 101, 192, 0.14);
+}
+
+/* ── Commitments ──────────────────────────────────── */
+.present-commitments {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.present-commitments__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+}
+
+.present-commitments__cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+    .present-hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 28px;
+    }
+
+    .present-hero__illustration {
+        width: 180px;
+    }
+
+    .present-commitments__cards {
+        flex-direction: column;
+    }
+}
